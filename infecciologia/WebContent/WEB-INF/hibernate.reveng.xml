@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="public" match-name="1a_fase_intensiva"/>
+  <table-filter match-schema="public" match-name="1a_fase_intensiva_toma_medicamento"/>
+  <table-filter match-schema="public" match-name="2a_fase_continuacao"/>
+  <table-filter match-schema="public" match-name="2a_fase_continuacao_toma_medicamento"/>
+  <table-filter match-schema="public" match-name="classificacao_doenca"/>
+  <table-filter match-schema="public" match-name="contatos"/>
+  <table-filter match-schema="public" match-name="outro_grupo_risco"/>
+  <table-filter match-schema="public" match-name="paciente"/>
+  <table-filter match-schema="public" match-name="pessoa"/>
+  <table-filter match-schema="public" match-name="processo_infecciologia"/>
+  <table-filter match-schema="public" match-name="tb_hiv"/>
+  <table-filter match-schema="public" match-name="tb_mdr"/>
+  <table-filter match-schema="public" match-name="tipo_doente"/>
+</hibernate-reverse-engineering>

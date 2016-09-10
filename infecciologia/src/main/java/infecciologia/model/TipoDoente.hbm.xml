@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/set/2016 13:22:45 by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="model.TipoDoente" table="tipo_doente" schema="public" optimistic-lock="version">
+        <id name="idTipoDoente" type="int">
+            <column name="id_tipo_doente" />
+            <generator class="assigned" />
+        </id>
+        <property name="codigoTipoDoente" type="string">
+            <column name="codigo_tipo_doente" />
+        </property>
+        <property name="tipoDoente" type="string">
+            <column name="tipo_doente" />
+        </property>
+    </class>
+</hibernate-mapping>

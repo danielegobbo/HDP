@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/set/2016 13:22:45 by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="model.1aFaseIntensiva" table="1a_fase_intensiva" schema="public" optimistic-lock="version">
+        <composite-id name="id" class="model.1aFaseIntensivaId">
+            <key-property name="idPessoa" type="java.lang.Integer">
+                <column name="id_pessoa" />
+            </key-property>
+            <key-property name="id1aFaseIntensiva" type="java.lang.Integer">
+                <column name="id_1a_fase_intensiva" />
+            </key-property>
+            <key-property name="data1aFaseIntensiva" type="date">
+                <column name="data_1a_fase_intensiva" length="13" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://192.168.142.128:5432/FTD</property>
+        <property name="hibernate.connection.username">gnuhealth</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="model/2aFaseContinuacao.hbm.xml" />
+        <mapping resource="model/Paciente.hbm.xml" />
+        <mapping resource="model/Contatos.hbm.xml" />
+        <mapping resource="model/1aFaseIntensivaTomaMedicamento.hbm.xml" />
+        <mapping resource="model/1aFaseIntensiva.hbm.xml" />
+        <mapping resource="model/TipoDoente.hbm.xml" />
+        <mapping resource="model/ClassificacaoDoenca.hbm.xml" />
+        <mapping resource="model/Pessoa.hbm.xml" />
+        <mapping resource="model/ProcessoInfecciologia.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

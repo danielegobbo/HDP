@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/set/2016 13:22:45 by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="model.Contatos" table="contatos" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="endereco" type="string">
+            <column name="endereco" />
+        </property>
+        <property name="dataNascimento" type="date">
+            <column name="data_nascimento" length="13" />
+        </property>
+    </class>
+</hibernate-mapping>
