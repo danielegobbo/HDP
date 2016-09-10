@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/set/2016 23:09:31 by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="ao.odp.hdp.infecciologia.model.Paciente" table="paciente" schema="public" optimistic-lock="version">
+        <id name="idPaciente" type="int">
+            <column name="id_paciente" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="pessoa" class="ao.odp.hdp.infecciologia.model.Pessoa" fetch="select">
+            <column name="id_pessoa" />
+        </many-to-one>
+        <property name="numeroProcesso" type="string">
+            <column name="numero_processo" not-null="true" />
+        </property>
+        <set name="processoInfecciologias" table="processo_infecciologia" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_paciente" />
+            </key>
+            <one-to-many class="ao.odp.hdp.infecciologia.model.ProcessoInfecciologia" />
+        </set>
+    </class>
+</hibernate-mapping>

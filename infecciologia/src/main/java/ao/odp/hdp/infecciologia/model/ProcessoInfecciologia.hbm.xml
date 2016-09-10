@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/set/2016 23:09:31 by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="ao.odp.hdp.infecciologia.model.ProcessoInfecciologia" table="processo_infecciologia" schema="public" optimistic-lock="version">
+        <id name="idProcessoInfecciologia" type="int">
+            <column name="id_processo_infecciologia" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="classificacaoDoenca" class="ao.odp.hdp.infecciologia.model.ClassificacaoDoenca" fetch="select">
+            <column name="id_classificacao_doenca" />
+        </many-to-one>
+        <many-to-one name="paciente" class="ao.odp.hdp.infecciologia.model.Paciente" fetch="select">
+            <column name="id_paciente" />
+        </many-to-one>
+        <many-to-one name="tipoDoente" class="ao.odp.hdp.infecciologia.model.TipoDoente" fetch="select">
+            <column name="id_tipo_doente" />
+        </many-to-one>
+        <property name="idBk" type="java.lang.Integer">
+            <column name="id_bk" />
+        </property>
+        <property name="numeroIdentificacao" type="string">
+            <column name="numero_identificacao" not-null="true" />
+        </property>
+        <property name="idFase" type="java.lang.Integer">
+            <column name="id_fase" />
+        </property>
+        <property name="processoInfecciologia" type="string">
+            <column name="processo_infecciologia" />
+        </property>
+    </class>
+</hibernate-mapping>
